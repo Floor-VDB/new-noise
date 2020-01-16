@@ -53,7 +53,15 @@ sentences = ["electric, energy nodes, attractors, transmitters, conductors",
              "It’s never been safe to live in a world that teaches us to respect property and disregard human life.",
              "Tonight we can be as mighty as tannhäuser and we can tumble excited down the labyrinths and the turns knowing that derive` is potent.",
              "Fight fire with fire and everything will burn. Yeah.",
-             "you can't stop us all... after all, we're all alike."
+             "you can't stop us all... after all, we're all alike.",
+             "recent_value = pyperclip.paste()",
+             "def change_char(s, p, r):",
+             "return s[:p]+r+s[p+1:]",
+             "while True:tmp_value = pyperclip.paste()",
+             "if tmp_value != recent_value:",
+             "if int(randrange(0,10))<8:",
+             "pony = change_char(str(recent_value), randrange(len(str(recent_value))), random.choice(string.ascii_letters))",
+             "import pyperclip from random import randrange"
              ]
 
 recent_value = pyperclip.paste()
@@ -64,7 +72,7 @@ def change_char(s, p, r):
 while True:
     tmp_value = pyperclip.paste()
     if tmp_value != recent_value:
-        if int(randrange(0,10))<7:
+        if int(randrange(0,10))<8:
             recent_value = tmp_value
             pony = change_char(str(recent_value), randrange(len(str(recent_value))), random.choice(string.ascii_letters))
             pyperclip.copy(str(pony))
